@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="icon" href="images/l2.jpg">
+	<title>When In Need</title>
+	<!--/tags -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	
+	<script type="application/x-javascript">
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>
+
+	
+<script>
+
+	var playmovie = function(){
+	 
+	}
+	
+	fetch('http://localhost:2000/movie/all').then(function(response){
+		console.log("........." , response )
+		return response.json()
+	}).then(function(data){
+		console.log("data from the backend", data)
+	 var movielistdiv =  document.getElementById('movielist')
+	 for(var i=0;i<data.data.length;i++){
+	 var div = document.createElement('div')
+	 div.id = i+ "moviebox"
+	
+	 var label1 = document.createElement('label')
+	 label1.innerHTML = data.data[i].title
+	 label1.style.display = "block"
+	 var label2 = document.createElement('label')
+	 label2.innerHTML = data.data[i].duration
+	
+	 var image = document.createElement('image')
+	 image.setAttribute('src', data.data[i].thumbnail)
+	 div.addEventListener('click' , function(event){
+		 console.log("event", event)
+		 console.log("this", this.id , parseInt(this.id))
+	
+		localStorage.moviename = data.data[parseInt(this.id)].title
+		window.location="playmovie.html"
+	 })
+	
+	 div.style.border = "1px solid black"
+	 div.style.height = "100px"
+	 div.style.width = "100px"
+	
+	
+	
+	 div.appendChild(label1)
+	 div.appendChild(label2)
+	 div.appendChild(image)
+	 movielistdiv.appendChild(div)
+	 
+	 }
+
+	 
+	})
+	
+	
+	</script>
+
+	
+	<!--//tags -->
+	<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="css/font-awesome.css" rel="stylesheet">
+	<!-- //for bootstrap working -->
+	<link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,600i,700" rel="stylesheet">
+</head>
+
+<body>
+	<!-- header -->
+	<div class="header" id="home">
+		<div class="top_menu">
+<div class="container">
+			<div class="header_left">
+				<ul>
+					<li><i class="fa fa-map-marker" aria-hidden="true"></i> Karnataka, India</li>
+					<li><i class="fa fa-phone" aria-hidden="true"></i> +(91) 9060743976</li>
+					<li><i class="fa fa-envelope-o" aria-hidden="true"></i> <a href="mailto:WinServices@gmail.com">WinServices@gmail.com</a></li>
+				</ul>
+			</div>
+			<div class="header_right">
+				<ul class="forms_right">
+					<li><a href="donar-registration.html"> Register as Donor</a> </li>
+				</ul>
+
+			</div>
+		
+			</div>
+		</div>
+
+		<div class="content white">
+			<nav class="navbar navbar-default" role="navigation">
+				<div class="container">
+					<div class="navbar-header">
+						<!-- <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> -->
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+						
+							
+							<a class="navbar-brand" href="index.html"><img src="images/l2.jpg" class="img-fluid" width="180px">
+								<div>
+
+								</div>
+								<span class="first-letter" style="color: red">W</span><span style="color:black">HEN</span>
+								<span class="first-letter" style="color: red">I</span><span style="color:black">N</span>
+								<span class="first-letter" style="color: red">N</span><span style="color:black">EED</span>
+								 </a>
+						
+					</div>
+					<!--/.navbar-header-->
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<nav>
+							<ul class="nav navbar-nav">
+								<li><a href="index.html" class="active">Home</a></li>
+								<li><a href="about.html">About</a></li>
+								<li><a href="mail.html">Mail Us</a></li>
+								<li><a href="whyToDonate.html">who can donate</a></li>
+								<li><a href="searchForBlood.html">Search for Blood</a></li>
+								<li><a href="donarLogin.html">LogIn</a></li>								
+								
+							</ul>
+						</nav>
+					</div>
+					<!--/.navbar-collapse-->
+					<!--/.navbar-->
+				</div>
+			</nav>
+		</div>
+	</div>
+	<!-- banner -->
+	<div id="myCarousel" class="carousel slide" data-ride="carousel">
+		<!-- Indicators -->
+		<ol class="carousel-indicators">
+			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+			<li data-target="#myCarousel" data-slide-to="1" class=""></li>
+			<li data-target="#myCarousel" data-slide-to="2" class=""></li>
+			<li data-target="#myCarousel" data-slide-to="3" class=""></li>
+		</ol>
+		<div class="carousel-inner" role="listbox">
+			<div class="item active">
+				<div class="container">
+					<div class="carousel-caption">
+						<h3>With a Touch of <span>Kindness.</span></h3>
+						<p >We can save your life</p>
+						<h6>From the most common blood group to the rarest, this site has a huge database of blood donors. 
+							So if you need blood, it's a good place to turn to. It's simple.It's effective. It's Free. It can match you with a donor near you in minutes. And you can save the life of a loved one!!!</h6>
+
+					</div>
+				</div>
+			</div>
+			<div class="item item2">
+				<div class="container">
+					<div class="carousel-caption">
+						<h3>With a Touch of <span>hope.</span></h3>
+						<p>Your 1 unit of blood can save 3 lives</p>
+						<h6>The mission of Save Life India is that not a single person  should  suffer/die  due to non availability of blood.</h6>
+					</div>
+				</div>
+			</div>
+			<div class="item item3">
+				<div class="container">
+					<div class="carousel-caption">
+						<h3>With a Touch of <span>Saving Life.</span></h3>
+						<p>Every two seconds someone needs Blood</p>
+						<h6>We are part of “Volunteer for a Better India”, where we work towards strengthening a technology-linked platform aimed at building a country-wide network of blood donors. Till date, through this initiative thousands of people joined and many lives have received a fresh gush of blood and lives !</h6>
+					</div>
+						
+				</div>
+			</div>
+			<div class="item item4">
+				<div class="container">
+					<div class="carousel-caption">
+						<h3>With a Touch of <span>Health</span></h3>
+						<p>Blood Donors Network</p>
+						<h6>Save life India does not collect or store blood. Blood being a highly perishable, we insist that it should be stored in the best vessel – The Human Body!</h6>
+					</div>
+				</div>
+			</div>
+		</div>
+		<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+			<span class="fa fa-chevron-left" aria-hidden="true"></span>
+			<span class="sr-only">Previous</span>
+		</a>
+		<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+			<span class="fa fa-chevron-right" aria-hidden="true"></span>
+			<span class="sr-only">Next</span>
+		</a>
+		<!-- The Modal -->
+	</div>
+	<!--//banner -->
+	<!-- about -->
+	<div class="agile-about w3ls-section">
+	<!-- about-bottom -->
+	<div class="agileits-about-btm">
+	<h3 class="heading-agileinfo">Welcome To WIN!<span>Never feel yourself weak, you have the ability to save a life. Just donate blood.</span></h3>
+		<div class="container">
+			<div class="w3-flex">
+			<div class="col-md-4 col-sm-4 ab1 agileits-about-grid1">
+				<h4 class="agileinfo-head">The Donation Process</h4>
+				<p>The blood donation process from the time you arrive until the time you leave takes about an hour. The donation itself is only about 8-10 minutes on average.</p>
+				<!-- <h5>Learn More....</h5> -->
+			</div>
+			<div class="col-md-4 col-sm-4 ab1 agileits-about-grid2">
+				<h4 class="agileinfo-head">Learn About Blood</h4>
+				<p>Every two seconds someone in the world needs blood. It is essential for surgeries, cancer treatment, chronic illnesses, and traumatic injuries. Whether a patient receives whole blood,
+					 red cells, platelets or plasma, this lifesaving care starts with one person making a generous donation. </p>
+				
+				<!-- <h5>Learn More....</h5> -->
+				
+			</div>
+			<div class="col-md-4 col-sm-4 ab1 agileits-about-grid3">
+				<h4 class="agileinfo-head">Eligibility Requirements</h4>
+				<p>To ensure the safety of both patients and donors, these are some of the requirements donors must meet to be eligible to donate blood based on their donation type. </p>
+				<!-- <h5>Learn More....</h5> -->
+			</div>
+			<div class="clearfix"></div>
+			</div>
+		</div>
+	</div>
+	<!-- //about-bottom -->
+	<!---->
+</div>
+
+<marquee direction ="left"><h1 style="color: red;"> Saving Lives, Its in our blood. Find out if you can Donate blood and save life!!! </h1></marquee>
+<h2  align="center">Video which inspire people to donate blood and save life!!!</h2>
+<div align="center" id="movielist" style="background-color:rgb(211, 104, 104);">
+
+</div>
+
+
+
+<!-- emergency -->
+<div class="emergency_cases_w3ls">
+<div class="emergency_cases_bt">
+	<div class="container">
+	<div class="emergency_cases_top">
+		<div class="col-md-6 emergency_cases_w3ls_left">
+			<h4>Opening Hours</h4>
+			<h6>Monday - Friday&nbsp;<span class="eme">8.00 - 18.00</span></h6>
+			<h6>Monday - Saturday&nbsp;<span class="eme">9.00 - 17.00</span></h6>
+			<h6>Monday - Sunday&nbsp;<span class="eme">9.00 - 15.00</span></h6>
+		</div>
+		<div class="col-md-6 emergency_cases_w3ls_right">
+			<h4>WIN Helpline</h4>
+			<h5><i class="fa fa-phone" aria-hidden="true"></i>8769876543</h5>
+			<p>If you are in need of Blood or If you want to donate blood, Give a missed call to above number.</p>
+		</div>
+		
+		<div class="clearfix"></div>
+		</div>
+	</div>
+	</div>
+</div>
+<!-- //emergency -->
+<!-- services -->
+
+<!-- //services -->
+<!-- Clients -->
+<div class="tesimonials">
+<div class="tesimonials_tp">
+		<div class="container">
+			<div class="tittle_head_w3layouts">
+				<h3 class="heading-agileinfo te">What Donors Say<span class="te"> Donate blood and be the reason of smile to many faces...😊</span></h3>
+			</div>
+			<div class="inner_sec_info_agileits_w3">
+				<div class="test_grid_sec">
+					<div class="col-md-offset-2 col-md-8">
+						<div class="carousel slide two" data-ride="carousel" id="quote-carousel">
+							<!-- Bottom Carousel Indicators -->
+							<ol class="carousel-indicators two">
+								<li data-target="#quote-carousel" data-slide-to="0" class="active"></li>
+								<li data-target="#quote-carousel" data-slide-to="1"></li>
+								<li data-target="#quote-carousel" data-slide-to="2"></li>
+							</ol>
+
+							<!-- Carousel Slides / Quotes -->
+							<div class="carousel-inner">
+
+								<!-- Quote 1 -->
+								<div class="item active">
+									<blockquote>
+										<div class="test_grid">
+											<div class="col-sm-3 text-center test_img">
+												<img src="images/w1.jpg" alt=" " class="img-responsive" />
+
+											</div>
+											<div class="col-sm-9 test_img_info">
+												<p>My name is Divya Rao, Government servant from karnataka. On receiving call from unknown needy person, 
+													I rushed to nearby hospital and donated Blood to 6 year old baby Tamanna for her heart surgery. 
+													Thank you WIN- Save Life India Team for launching such needful website and for giving me 
+													opportunity for saving life. I request all youth to come forward and be part of this Nobel cause.</p>
+												<h6>Divya Rao</h6>
+											</div>
+										</div>
+									</blockquote>
+								</div>
+								<!-- Quote 2 -->
+								<div class="item">
+									<blockquote>
+										<div class="test_grid">
+											<div class="col-sm-3 text-center test_img">
+												<img src="images/m1.jpg" alt=" " class="img-responsive" />
+											</div>
+											<div class="col-sm-9 test_img_info">
+												<p>Few months back I met with very dangerous road accident , I was immediately admitted in hospital.
+													 For surgery blood was needed. Required blood was not available in blood bank. My family and close friends started searching for suitable blood donor and no donor was available. Situation became panic. Soon one of volunteer of 'Save Life India' 
+													suggested a website . They search and contacted donor. Donor soon came and donated blood . 
+													Surgery was successful and My life is saved.</p>
+												<h6>Ruben Stalin</h6>
+											</div>
+										</div>
+									</blockquote>
+								</div>
+								<!-- Quote 3 -->
+								<div class="item">
+									<blockquote>
+										<div class="test_grid">
+											<div class="col-sm-3 text-center test_img">
+												<img src="images/m2.jpg" alt=" " class="img-responsive" />
+											</div>
+											<div class="col-sm-9 test_img_info">
+												<p>I believe this initiative will surely help save valuable lives through our continuous support & willingness to donate.
+													So let us join & promote this initiative as well as we can & Experience the joy of giving.</p>
+												<h6>vijay Banerjii</h6>
+											</div>
+										</div>
+									</blockquote>
+								</div>
+							</div>
+
+							<!-- Carousel Buttons Next/Prev -->
+							<a data-slide="prev" href="#quote-carousel" class="left carousel-control"><i class="fa fa-chevron-left"></i></a>
+							<a data-slide="next" href="#quote-carousel" class="right carousel-control"><i class="fa fa-chevron-right"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //Clients -->
+
+
+	<!-- js -->
+	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+	
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+</body>
+
+</html>

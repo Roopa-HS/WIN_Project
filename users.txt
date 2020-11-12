@@ -1,0 +1,8 @@
+{"name":"Roopa","email":"roopa@gmail.com","password":"12345"}
+{"userName":"Roopa","password":"Hsroopa325@","confirmPassword":"Hsroopa325@","phoneNumber":"8907654678","typeGender":"Male","email":"roopa325@gamil.com","date":"2020-09-09","blood_grp":"o+","city":"bangalore"}
+{"userName":"pavi","password":"HSroopa325@","confirmPassword":"HSroopa325@","phoneNumber":"5467897654","typeGender":"Female","email":"pavi@gmail.com","date":"2020-09-23","blood_grp":"B-","city":"bang"}
+{"userName":"vibha","password":"HSroopa325@","confirmPassword":"HSroopa325@","phoneNumber":"5436787654","typeGender":"Female","email":"vibha@gmail.com","date":"2020-09-23","blood_grp":"B+","city":"scss"}
+{"userName":"Divya","password":"Divi@123","confirmPassword":"Divi@123","phoneNumber":"7654345678","typeGender":"Female","email":"hsdivya13@gmail.com","date":"2020-04-16","blood_grp":"AB-","city":"sssss"}
+{"userName":"RoopaHS","email":"ro@gmail.com","password":"12345","confirmPassword":"12345","id":"223244344","verified":"true"}
+{"userName":"RoopaHS","email":"rosss@gmail.com","password":"12345","confirmPassword":"12345","id":"223244344","verified":"true"}
+{"userName":"Vibha@123","password":"Vibha@123","confirmPassword":"Vibha@123","phoneNumber":"5645678987","typeGender":"Female","email":"f@gmail.com","date":"2020-09-23","blood_grp":"AB-","city":"xxxxx"}

@@ -1,0 +1,53 @@
+
+.bodybg {
+    background: aliceblue;
+}
+.navbar-header a {
+    color: #fff;
+    font-size: 2.5rem;
+}
+#myNavbar ul li a {
+    color: #fff;
+}
+#myNavbar ul li a:hover {
+    color: #337ab7;
+}
+
+#myNavbar.nav > li > a:focus, .nav > li > a:hover {
+    background-color: #f0f8ff;
+}
+#banner.jumbotron {
+    padding-top: 10%;
+}
+#banner.jumbotron.loginPage{
+    width: 100%;
+    background-position: fixed;
+    background-repeat: no-repeat;
+    background:url(images/hospital.jpg);
+}
+#banner.jumbotron.blood-donor-pg{
+    width: 100%;
+    background-position: center left;
+    background-repeat: no-repeat;
+    background:url(images/donateBlood.jpg);
+}
+#banner.jumbotron.patient-reg-bg{
+    width: 100%;
+    background-position: fixed;
+    background-repeat: no-repeat;
+    background:url(images/doctor.jpg); 
+}
+.form-bg-box{
+    background: rgb(169 215 228);
+    border: 1px solid #fff;
+    padding: 20px;
+}
+.form-control[readonly] {
+    background-color: #fff;
+}
+#signup a {
+    color: #fff;
+}
+.footer{
+    margin-top: 50px;
+}

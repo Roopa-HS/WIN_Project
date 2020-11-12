@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Meta tags -->
+    <title>Search Donor</title>
+	<script src="js/cities.js"></script>
+	<script src="js/showDonorData.js"> </script>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/font-awesome.css">
+	<link rel="stylesheet" href="css/regstyle.css">
+	<script type="text/javascript" src="js/regscript.js"></script>
+	<!-- google fonts  -->
+	<link href="//fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i" rel="stylesheet">
+	<link href="//fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i,700" rel="stylesheet">
+    
+</head>
+<body align="right">
+	<div class="bgImage">
+	<div class="heading">
+		<h1>Search For Blood Donors</h1>
+	</div>
+		<div class="container">
+			<div class="heading1">
+				<h2>Please Enter Following Inputs </h2>
+				
+			</div>
+			<div class="agile-form">
+				<form name="regPage"  method="post" >
+					
+					<ul class="field-list">
+						<li> 
+							<label class="form-label">
+                                <img src="images/searchicon.jpg" alt="searching" width="40" height="50">  Search Donors
+							   <span class="form-required"> * </span>
+							</label>
+							<div class="form-input">
+								<select onchange="print_city('city', this.selectedIndex);" id="state" name ="stt" class="form-control" required></select>
+                                <select id ="city" class="form-control" required></select>
+                                <script language="javascript">print_state("state");</script>
+							</div>
+						</li>
+						<li> 
+							<label class="form-label">
+							   Blood Group
+							   <span class="form-required"> * </span>
+							</label>
+							<div class="form-input">
+								<select id="blood_grp" class="form-control">
+									<option>Blood group</option>
+									<option>A+</option>
+									<option>A-</option>
+									<option>B+</option>
+									<option>B-</option>
+									<option>AB+</option>
+									<option>AB-</option>
+									<option>o+</option>
+									<option>o-</option>
+								  </select>
+							</div>
+						</li>
+						
+							
+          </ul>
+          <input type="reset" value="Reset"> 
+          <input type="submit" value="Search" onclick="showDonors(event)">
+		  
+		  
+
+				</form>	
+			</div>
+		</div>
+	</div>
+</body>
+</html>

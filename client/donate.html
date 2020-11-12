@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Meta tags -->
+	<title>Donate Blood</title>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="css/font-awesome.css">
+	<link rel="stylesheet" href="css/regstyle.css">
+	<script type="text/javascript" src="js/jsonToObjectUserDetails.js"></script>
+	<!-- google fonts  -->
+	<link href="//fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i" rel="stylesheet">
+	<link href="//fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i,700" rel="stylesheet">
+</head>
+
+<body>
+
+	<!-- <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="whyToDonate.html">Why to donate</a></li>
+            <li><a href="adminLogin.html">User Login</a></li>
+         
+          <li><a href="patientLogin.html"> Donor Login</a></li>
+          </ul>
+      </div> -->
+	<div class="bgImg">
+		<div class="heading">
+			<h1>Donate Your Blood</h1>
+		</div>
+		<div class="container">
+			<div class="heading1">
+				<h2>Please Enter Following Requirement </h2>
+
+			</div>
+			<div class="agile-form">
+				<form name="regPage" method="post">
+
+					<ul class="field-list">
+						<li>
+							<label class="form-label">
+								Please Enter Your Email :
+								<span class="form-required"> * </span>
+							</label>
+							<div class="form-input">
+								<input type="text" class="form-control" required placeholder="myexample@gmail.com"
+									id="emailid" name="emailid" onBlur="getData(event)">
+							</div>
+						</li>
+						<li>
+							<label class="form-label">
+								Full Name
+								<span class="form-required"> * </span>
+							</label>
+							<div class="form-input">
+								<input type="text" id="name" class="form-control" placeholder="Enter Full Name"
+									name="name">
+							</div>
+						</li>
+						<li>
+							<label class="form-label">
+								Gender
+								<span class="form-required"> * </span>
+							</label>
+							<div class="form-input">
+								<input type="text" id="gender" class="form-control" name="gender">
+
+							</div>
+						</li>
+						<li>
+							<label class="form-label">
+								Weight in Kgs
+								<span class="form-required"> * </span>
+							</label>
+							<div class="form-input">
+								<select class="form-control" id="weight" name="weight" required>
+									<option value="Select Weight">Select Weight</option>
+									<option value="Under 50"> Under 50 </option>
+									<option value="More than or equal to 50"> More than or equal to 50 </option>
+
+								</select>
+							</div>
+						</li>
+						Have you donated your blood in last 3 months?: <input type="checkbox" id="myCheck">
+
+						<li>
+
+						<li>
+							<label class="form-label">
+								Blood Group
+								<span class="form-required"> * </span>
+							</label>
+							<div class="form-input">
+								<input type="text" id="bgroup" class="form-control" name="bgroup">
+
+							</div>
+						</li>
+
+					</ul>
+					<input type="reset" value="Reset">
+					<input type="submit" value="Donate" onclick="onDonateCall(event)">
+
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Meta tags -->
+	<title>Appoint My Doctor Form</title>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<!-- <link rel="stylesheet" href="css/font-awesome.css"> -->
+	<link rel="stylesheet" href="css/regstyle.css">
+	<script type="text/javascript" src="js/regscript.js"></script>
+	<script src="js/cities.js"></script>
+	<!-- google fonts  -->
+	<link href="//fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i" rel="stylesheet">
+	<link href="//fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i,700" rel="stylesheet">
+</head>
+<body>
+	
+	<div class="banner">
+	<div class="heading">
+		<h1>Blood Donor Registration</h1>
+	</div>
+		<div class="container">
+			<div class="heading1">
+				<h2>Please Enter Donor Details</h2>
+				
+			</div>
+			<div class="agile-form">
+				<form name="regPage" method="post" >
+					
+					<ul class="field-list">
+						<li>
+							<label class="form-label"> 
+								Full Name 
+								<span class="form-required"> * </span> 
+							</label>
+							<div class="form-input">
+								<input type="text" id ="name" class="form-control" required placeholder="Enter FullName" name="name"
+								onBlur="checklen(this.form)">
+							</div>
+						</li>
+						
+
+						<li>
+							<label class="form-label"> 
+								Password 
+								<span class="form-required"> * </span> 
+							</label>
+							<div class="form-input">
+								<input type="password" class="form-control" required  id="pwd1"
+                  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                  title=" Password Must contain at least one number and one uppercase and lowercase letter and one special character, and at least 8 or more characters"
+                  placeholder="Enter Password" name="password1">
+                
+							</div>
+						</li>
+						
+            <li>
+							<label class="form-label"> 
+								Confirm Password 
+								<span class="form-required"> * </span> 
+							</label>
+							<div class="form-input">
+								<input type="password" class="form-control" required id="pwd2"
+                  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                  title=" Password Requirement: Requies at least one number, one uppercase letter, one lowercase letter, and one of the following characters: ! @ & # $ % _ ? . *and should be 8 or more characters"
+                  placeholder="Re-Enter Password" name="password2" onblur="return matchpass()">
+                <input type="checkbox"  onclick="showPassword()">Show Password
+							</div>
+						</li>
+						
+						<li>
+							<label class="form-label">
+							   Gender
+							   <span class="form-required"> * </span>
+							</label>
+							<div class="form-input">
+								<select class="form-control" id="gender" name="gender" required>
+									<option value="Select Gender">Select Gender</option>
+									<option value="Male"> Male </option>
+									<option value="Female"> Female </option>
+									<option value="Transgender"> Transgender </option>
+								</select>
+							</div>
+						<li>
+
+						<li> 
+							<label class="form-label">
+							   Mobile Number
+							   <span class="form-required"> * </span>
+							</label>
+							<div class="form-input">
+								<input type="text" class="form-control"required id="mobNo" name="mobNo" placeholder="Contact Number"
+                                   onblur="return validateMobileNumber()">
+							</div>
+						</li>
+						
+
+							
+						<li> 
+							<label class="form-label">
+							   Email
+							   <span class="form-required"> * </span>
+							</label>
+							<div class="form-input">
+								<input type="text" class="form-control" required placeholder="myexample@gmail.com" id="emailid" name="emailid"
+								onBlur="return validateEmail()">
+							</div>
+						</li>
+						<li>
+
+							<label class="form-label">
+							   Date of Birth
+							  
+							</label>
+							<div class="form-input dob">
+								<input type="date" class="form-control" id="dateString" required name="dateString" placeholder="DOB: DD/MM/YYYY"
+                                >
+							</div>
+						</li>
+						<li> 
+
+
+							<li> 
+								<label class="form-label">
+								   Blood Group
+								   <span class="form-required"> * </span>
+								</label>
+								<div class="form-input">
+									<select id="blood_grp" class="form-control">
+										<option>Blood group</option>
+										<option>A+</option>
+										<option>A-</option>
+										<option>B+</option>
+										<option>B-</option>
+										<option>AB+</option>
+										<option>AB-</option>
+										<option>o+</option>
+										<option>o-</option>
+									  </select>
+								</div>
+							</li>
+							<li> 
+								<label class="form-label">
+								   Address
+								   
+								</label>
+								<div class="form-input">
+									<input type="text" class="form-control" required placeholder="Address" id="Address" name="Address"
+									>
+									<div class="form-input">
+							</li>
+			
+							<li> 
+								<label class="form-label">
+								   Country
+								   <span class="form-required"> * </span>
+								</label>
+								<div class="form-input">
+								<select class="form-control" id="country" name="country" required>
+									<option value="Select country"> Select country </option>
+									<option value="India"> India </option>
+								
+								</select>
+							</div>
+							</li>
+							<li>
+								<label class="form-label">
+								   state
+								   <span class="form-required"> * </span>
+								</label>
+								<div class="form-input">
+									<select onchange="print_city('city', this.selectedIndex);" id="state" name ="stt" class="form-control" required></select>
+									<select id ="city" class="form-control" required></select>
+									<script language="javascript">print_state("state");</script>
+														</div>
+													</li>
+
+						
+						<li><input type="checkbox" id="checkAge" >Are you sure, You are aged between 18 and 65.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<input type="checkbox" id="covid" >Have you suffered from COVID in past.</li>
+						
+          </ul>
+		  <input type="reset" value="Reset"> 
+
+		 
+		  <input type="submit"  onclick="validate(event)" >
+		  
+				</form>	
+
+			</div>
+		</div>
+	</div>
+</body>
+</html>
